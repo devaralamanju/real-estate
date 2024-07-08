@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import HomeBanner from './components/HomeBanner/HomeBanner';
+import TruliaHelp from './components/TruliaHelp/TruliaHelp';
+import CheckoutNeighborhood from './components/CheckoutNeighborhood/CheckoutNeighborhood';
+import Footer from './components/Footer/Footer';
+import FooterLegalNotice from './components/FooterLegalNotice/FooterLegalNotice';
+import { getNewListedHomes } from './services/realEstateService';
+import RecentlyViewed from './components/RecentlyViewed/RecentlyViewed';
+import Carousel from './components/Carousel/Carousel';
 
-function App() {
+
+
+const App = () => {
+  const homes = getNewListedHomes();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <HomeBanner />
+      <RecentlyViewed/>
+      <TruliaHelp/>
+      <Carousel/>
+      <CheckoutNeighborhood/>
+      <Footer/>
+      <FooterLegalNotice/>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
