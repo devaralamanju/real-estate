@@ -46,7 +46,7 @@ const RecentlyViewed = () => {
 
     return (
         <div className="recently-viewed-container">
-            <h1>Recently Viewed</h1>
+            <h1>Recently Viewed </h1>
            
             <div className="recently-viewed">
                 {getVisibleItems().map((item, index) => (
